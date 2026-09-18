@@ -28,8 +28,7 @@
     hud.innerHTML =
       '<div class="embed-hud-head">' +
       '<span class="mono-tag">[EMB]</span>' +
-      '<span class="mono-tag faint" id="embed-hud-model">all-MiniLM-L6-v2</span>' +
-      "</div>" +
+            "</div>" +
       '<div class="embed-hud-query" id="embed-hud-query">hover a word</div>' +
       '<ol class="embed-hud-list" id="embed-hud-list"></ol>';
     document.body.appendChild(hud);
@@ -132,10 +131,7 @@
       words[keys[i]] = toF32(data.words[keys[i]]);
     }
     ensureHud();
-    var modelEl = document.getElementById("embed-hud-model");
-    if (modelEl && data.model) modelEl.textContent = data.model;
-
-    document.body.addEventListener("mouseenter", onEnter, true);
+document.body.addEventListener("mouseenter", onEnter, true);
     document.body.addEventListener("mouseleave", onLeave, true);
   }
 
